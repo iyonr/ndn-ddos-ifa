@@ -3,7 +3,7 @@ Prerequisites
 
 Custom version of NS-3 and specified version of ndnSIM needs to be installed.
 
-The code should also work with the latest version of ndnSIM, but it is not guaranteed.
+The code should also work with guarantee for ndnSIM version 1.0
 
     mkdir ns-dev
     cd ns-dev
