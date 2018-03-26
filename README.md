@@ -14,14 +14,14 @@ The code should also work with the latest version of ndnSIM, but it is not guara
     git clone git://github.com/NDN-Routing/ndnSIM.git ns-3/src/ndnSIM
     (cd ns-3/src/ndnSIM && git checkout -b v0.5-rc2 db5f3b6acf526918be0a6a67c11378fa32cb27de)
 
-    git clone git://github.com/cawka/ndnSIM-ddos-interest-flooding.git ndnSIM-ddos-interest-flooding
+    git clone git://github.com/iyonr/ndn-ddos-ifa.git ndn-ddos-ifa
 
     cd ns-3
     ./waf configure -d optimized
     ./waf
     sudo ./waf install
 
-    cd ../ndnSIM-ddos-interest-flooding
+    cd ../ndn-ddos-ifa
 
 After which you can proceed to compile and run the code
 
