@@ -7,12 +7,24 @@ I update some of the Prerequisites steps from previous works by A. Afanayshev.
 On Ubuntu, please install this lib for the firstime:    
 
     sudo apt-get update
-    sudo apt-get install gcc g++ python python-dev mercurial bzr gdb valgrind gsl-bin libgsl0-dev libgsl0ldbl flex bison tcpdump sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev libgtk2.0-0 libgtk2.0-dev uncrustify doxygen graphviz imagemagick texlive texlive-latex-extra texlive-generic-extra texlive-generic-recommended texinfo dia texlive texlive-latex-extra texlive-extra-utils texlive-generic-recommended texi2html python-pygraphviz python-kiwi python-pygoocanvas libgoocanvas-dev python-pygccxml
-    sudo apt-get install python-dev python-pygraphviz python-kiwi
+    sudo apt-get install gcc g++ python python-dev mercurial bzr gdb valgrind gsl-bin libgsl0-dev libgsl0ldbl flex bison tcpdump 
+    sudo apt-get install sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev libgtk2.0-0 libgtk2.0-dev uncrustify doxygen graphviz
+    sudo apt-get install imagemagick texlive texlive-latex-extra texlive-generic-extra texlive-generic-recommended texinfo dia texlive
+    sudo apt-get install texlive-latex-extra texlive-extra-utils texlive-generic-recommended texi2html python-pygraphviz python-kiwi
+    sudo apt-get install python-pygoocanvas libgoocanvas-dev python-pygccxml
     sudo apt-get install python-pygoocanvas python-gnome2
     sudo apt-get install python-rsvg ipython
     sudo apt-get install libboost-all-dev
     sudo apt-get install build-essential libsqlite3-dev libcrypto++-dev
+    sudo apt-get install python-setuptools
+    
+After several installation processes finished, we need an R Programming to produce graphs and data:
+
+    sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
+    gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
+    gpg -a --export E084DAB9 | sudo apt-key add -
+    sudo apt-get update
+    sudo apt-get -y install r-base
     
 The code should also work with guarantee for ndnSIM version 1.0.
 
@@ -146,10 +158,6 @@ You can edit ``run.py`` script and ``scenarios/rocketfuel-maps-cch-to-annotaded.
 Or on Mac that uses `macports`:
 
     sudo port install py27-workerpool
-
-If `easy_install` is not yet installed, you can install it using the following command:
-
-    sudo apt-get install python-setuptools
 
 For more information about Rocketfuel topology files, please refer to http://www.cs.washington.edu/research/networking/rocketfuel/
 
