@@ -3,8 +3,17 @@ Prerequisites
 
 Custom version of NS-3 and specified version of ndnSIM needs to be installed.
 
-The code should also work with guarantee for ndnSIM version 1.0. I update some of the Prerequisites steps due to in previous works by A. Afanayshev is not detail.
-
+I update some of the Prerequisites steps from previous works by A. Afanayshev. 
+On Ubuntu, please install this lib for the firstime:    
+    sudo apt-get update
+    sudo apt-get install gcc g++ python python-dev mercurial bzr gdb valgrind gsl-bin libgsl0-dev libgsl0ldbl flex bison tcpdump sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev libgtk2.0-0 libgtk2.0-dev uncrustify doxygen graphviz imagemagick texlive texlive-latex-extra texlive-generic-extra texlive-generic-recommended texinfo dia texlive texlive-latex-extra texlive-extra-utils texlive-generic-recommended texi2html python-pygraphviz python-kiwi python-pygoocanvas libgoocanvas-dev python-pygccxml
+    sudo apt-get install python-dev python-pygraphviz python-kiwi
+    sudo apt-get install python-pygoocanvas python-gnome2
+    sudo apt-get install python-rsvg ipython
+    sudo apt-get install libboost-all-dev
+    sudo apt-get install build-essential libsqlite3-dev libcrypto++-dev
+    
+The code should also work with guarantee for ndnSIM version 1.0.
     mkdir ns-dev
     cd ns-dev
 
@@ -39,9 +48,15 @@ but you can see output from ``NS_LOG*`` calls from your scenarios and extensions
 
     ./waf configure --logging
 
+On ubuntu:
+    ./waf configure --boost-libs=/usr/lib/i386-linux-gnu --logging
+
 To configure in debug mode with all logging enabled
 
     ./waf configure --debug
+
+On ubuntu:
+    ./waf configure --boost-libs=/usr/lib/i386-linux-gnu --debug
 
 If you have installed NS-3 in a non-standard location, you may need to set up ``PKG_CONFIG_PATH`` variable.
 For example, if NS-3 is installed in /usr/local/, then the following command should be used to
@@ -136,7 +151,7 @@ For more information about Rocketfuel topology files, please refer to http://www
 
 You would also need `sqlite3` installed:
 
-On Unbuntu:
+On Ubuntu:
 
     sudo apt-get install sqlite3
 
