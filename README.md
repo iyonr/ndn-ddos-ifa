@@ -18,7 +18,7 @@ On Ubuntu, please install this lib for the firstime:
     sudo apt-get install build-essential libsqlite3-dev libcrypto++-dev
     sudo apt-get install python-setuptools
     
-After several installation processes finished, we need an R Programming to produce graphs and data:
+After several installation processes finished, we need an R Programming to produce graphs and compile the data. To **install R on Ubuntu, we use step as follows:**
 
     sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
     gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9
@@ -219,3 +219,6 @@ Additional graphs (Figure 9 from the paper) can be build using:
     install.packages ('proto')
     install.packages ('ggplot2', dep=TRUE)
     install.packages ('doBy', dep=TRUE)
+    install.packages ('reshape2')
+    install.packages ('scales')
+    install.packages ('plyr')
