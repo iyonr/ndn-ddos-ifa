@@ -51,6 +51,7 @@ but you can see output from ``NS_LOG*`` calls from your scenarios and extensions
     ./waf configure --logging
 
 On ubuntu:
+
     ./waf configure --boost-libs=/usr/lib/i386-linux-gnu --logging
 
 To configure in debug mode with all logging enabled
@@ -58,6 +59,7 @@ To configure in debug mode with all logging enabled
     ./waf configure --debug
 
 On ubuntu:
+
     ./waf configure --boost-libs=/usr/lib/i386-linux-gnu --debug
 
 If you have installed NS-3 in a non-standard location, you may need to set up ``PKG_CONFIG_PATH`` variable.
