@@ -23,7 +23,7 @@ good     = args[6]
 producer = args[7]
 
 minTime = 300
-attackTime = 300
+attackTime = 600 #DIGANTI MARION
 
 name = paste (sep="-", prefixes, "topo", topo, "evil", evils, "producer", producer)
 filename = paste(sep="", "results/",folder,"/process/", name, "-all-data.dat")

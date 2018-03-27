@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 # -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
 
 from subprocess import call
@@ -326,7 +327,7 @@ try:
 
     SatisfactionNumberOfAttackersFigures (name="figureXX", scenario=smallTree).run ()
     SatisfactionNumberOfAttackersFigures (name="figure7",  scenario=tree).run ()
-    # SatisfactionNumberOfAttackersFigures (name="figureYY", scenario=isp).run ()
+    SatisfactionNumberOfAttackersFigures (name="figureYY", scenario=isp).run ()
 
 finally:
     pool.join ()

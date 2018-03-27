@@ -63,7 +63,7 @@ cat (sep="", "Writing to ", paste(sep="","graphs/pdfs/", folder, "/",name2,".pdf
 pdf (paste(sep="","graphs/pdfs/", folder, "/",name2,".pdf"), width=5, height=4)
 
 minTime = 300
-attackTime = 1600
+attackTime = 600
 
 gdata = subset(data.all, minTime-40 <= Time & Time < minTime+attackTime+100)
 
@@ -88,6 +88,7 @@ g <- ggplot (gdata) +
   scale_fill_brewer(palette="PuOr") +
   scale_y_continuous (limits=c(0,1), breaks=seq(0,1,0.25), labels=percent_format ()) +
   facet_wrap (~ Scenario, nrow=5, ncol=1) +
+  geom_vline(xintercept = attackTime) +
   theme (legend.key.size = unit(0.8, "lines"),
          legend.position="none", #c(1.0, 0.0),
          legend.justification=c(1,0),

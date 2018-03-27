@@ -314,7 +314,9 @@ int main (int argc, char**argv)
       
       UniformVariable rand (0, 1);
       evilApp.Start (Seconds (300.0) + Time::FromDouble (rand.GetValue (), Time::MS));
-      evilApp.Stop (Seconds (600.0) + Time::FromDouble (rand.GetValue (), Time::MS));
+      evilApp.Stop (Seconds (900.0) + Time::FromDouble (rand.GetValue (), Time::MS));
+      evilApp.Start (Seconds (1000.0) + Time::FromDouble (rand.GetValue (), Time::MS));
+      evilApp.Stop (Seconds (1900.0) + Time::FromDouble (rand.GetValue (), Time::MS));
     }
   
   ph.Install (producerNodes);
@@ -323,7 +325,7 @@ int main (int argc, char**argv)
   
   Simulator::Schedule (Seconds (10.0), PrintTime, Seconds (10.0), name);
 
-  Simulator::Stop (Seconds (900.0));
+  Simulator::Stop (Seconds (2200.0));
   Simulator::Run ();
   Simulator::Destroy ();
  
